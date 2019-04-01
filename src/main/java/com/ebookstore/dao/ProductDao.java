@@ -26,8 +26,41 @@ public class ProductDao {
         product1.setUnitInStock(3);
         product1.setProductLanguage("English");
 
+        Product product2 = new Product();
+        product2.setProductName("Норма");
+        product2.setProductAuthor("Владимир Сорокин");
+        product2.setProductCategory("Books");
+        product2.setProductDescription("«Норма» — дебютный роман Владимира Сорокина. " +
+                "Был написан автором во времена СССР и распространялся в самиздате. " +
+                "В 2002 году книга была переиздана издательством Ad Marginem и " +
+                "вошла в собрание сочинений писателя. \n");
+        product2.setProductPrice(4);
+        product2.setProductCondition("new");
+        product2.setProductStatus("Active");
+        product2.setUnitInStock(5);
+        product2.setProductLanguage("Русский");
+
+        Product product3 = new Product();
+        product3.setProductName("Burzum - Filosofem");
+        product3.setProductAuthor("Burzum");
+        product3.setProductCategory("Vinyl");
+        product3.setProductDescription("Filosofem (Norwegian for \"philosopheme\") is the fourth studio album by" +
+                " Norwegian black metal solo project Burzum." +
+                " It was recorded in March 1993 and was the last recording before Varg Vikernes' " +
+                "imprisonment (16 May 1994); the album was not released until January 1996, however." +
+                "The album is noted for its experimental sound when " +
+                "compared to most other second wave black metal. " +
+                "Vikernes considered the release an \"anti-trend album\".\n");
+        product3.setProductPrice(40);
+        product3.setProductCondition("old");
+        product3.setProductStatus("Active");
+        product3.setUnitInStock(2);
+        product3.setProductLanguage("English");
+
         productList = new ArrayList<Product>();
         productList.add(product1);
+        productList.add(product2);
+        productList.add(product3);
 
         return productList;
     }
