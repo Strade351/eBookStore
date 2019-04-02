@@ -2,6 +2,7 @@ package com.ebookstore.dao;
 
 import com.ebookstore.model.Product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public class ProductDao {
 
     public List<Product> getProductList() {
         Product product1 = new Product();
+        product1.setProductId("P100");
         product1.setProductName("Process");
         product1.setProductAuthor("F. Kafka");
         product1.setProductCategory("Books");
@@ -27,6 +29,7 @@ public class ProductDao {
         product1.setProductLanguage("English");
 
         Product product2 = new Product();
+        product2.setProductId("P101");
         product2.setProductName("Норма");
         product2.setProductAuthor("Владимир Сорокин");
         product2.setProductCategory("Books");
@@ -41,6 +44,7 @@ public class ProductDao {
         product2.setProductLanguage("Русский");
 
         Product product3 = new Product();
+        product3.setProductId("P103");
         product3.setProductName("Burzum - Filosofem");
         product3.setProductAuthor("Burzum");
         product3.setProductCategory("Vinyl");
@@ -63,5 +67,15 @@ public class ProductDao {
         productList.add(product3);
 
         return productList;
+    }
+
+    public Product getProductById(String productId) throws IOException {
+        for (Product product: getProductList()) {
+            if (product.getProductId().equals(productId)) {
+                return product;
+            }
+        }
+
+        throw new IOException("No product found.");
     }
 }

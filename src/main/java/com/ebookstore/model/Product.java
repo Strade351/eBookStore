@@ -2,9 +2,9 @@ package com.ebookstore.model;
 
 public class Product {
 
+    private String productId;
     private String productName;
     private String productCategory;
-
     private String productAuthor;
     private String productDescription;
     private int productPrice;
@@ -12,6 +12,14 @@ public class Product {
     private String productStatus;
     private int unitInStock;
     private String productLanguage;
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
 
     public String getProductName() {
         return productName;

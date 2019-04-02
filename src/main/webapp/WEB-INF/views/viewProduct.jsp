@@ -16,12 +16,12 @@
                 </div>
 
                 <div class="col-md-5">
-                    <h3>Product Name</h3>
-                    <p>Product Description</p>
-                    <p>Author</p>
-                    <p>Category</p>
-                    <p>Condition</p>
-                    <p>Price</p>
+                    <h3>${product.productName}</h3>
+                    <p>${product.productDescription}</p>
+                    <p><strong>Author </strong>${product.productAuthor}</p>
+                    <p><strong>Category </strong>${product.productCategory}</p>
+                    <p><strong>Condition </strong>${product.productCondition}</p>
+                    <p><h4>${product.productPrice}$</h4></p>
             </div>
         </div>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
