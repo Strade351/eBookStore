@@ -7,8 +7,8 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>All Products</h1>
-            <p class="lead">Checkout all the awesome books awaible now!</p>
+            <h1>Product Inventory Page</h1>
+            <p class="lead">This is the Product Inventory Page!</p>
         </div>
 
         <table class = "table table-striped table=hover">
@@ -30,8 +30,13 @@
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
                     <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />">
-                        <span class="fas fa-info"></span></a></td>
+                        <span class="fas fa-info"></span></a>
+                    <a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}" />">
+                            <span class="fas fa-trash"></span></a></td>
+
                 </tr>
             </c:forEach>
         </table>
+
+        <a href="<spring:url value="/admin/productInventory/addProduct" />" class="btn btn-primary">Add Product</a>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
