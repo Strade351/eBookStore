@@ -67,6 +67,7 @@ public class HomeController {
         product.setProductCategory("book");
         product.setProductCondition("new");
         product.setProductStatus("active");
+        product.setProductLanguage("english");
 
         model.addAttribute("product", product);
 
