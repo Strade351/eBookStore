@@ -1,9 +1,8 @@
 package com.ebookstore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.persistence.*;
 
 @Entity
 public class Product {
@@ -21,6 +20,17 @@ public class Product {
     private String productStatus;
     private int unitInStock;
     private String productLanguage;
+
+    @Transient
+    private MultipartFile productImage;
+
+    public MultipartFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(MultipartFile productImage) {
+        this.productImage = productImage;
+    }
 
     public int getProductId() {
         return productId;
