@@ -18,6 +18,11 @@
         </div>
 
         <div class="form-group">
+        <label for="name">Author</label>
+        <form:input path="productAuthor" id="author" class="form-Control" />
+        </div>
+
+        <div class="form-group">
             <label for="category">Category: </label>
             <label class="check-box"><form:radiobutton path="productCategory" id="category" value="book" />Book</label>
             <label class="check-box"><form:radiobutton path="productCategory" id="category" value="vinyl-record" />Vinyl Record</label>
