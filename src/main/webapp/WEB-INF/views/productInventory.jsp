@@ -32,8 +32,10 @@
                     <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />">
                         <span class="fas fa-info"></span></a>
                     <a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}" />">
-                            <span class="fas fa-trash"></span></a></td>
-
+                            <span class="fas fa-trash"></span></a>
+                        <a href="<spring:url value="/admin/productInventory/editProduct/${product.productId}" />">
+                            <span class="fas fa-pencil-alt"></span></a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>
