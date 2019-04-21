@@ -23,6 +23,8 @@
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
     <!-- Main CSS -->
     <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
     <!-- Custom styles for this template -->
     <style>
         .bd-placeholder-img {
@@ -56,17 +58,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/productList" />">Products</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav pull-right">
                 <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/admin" />">Admin</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </nav>
 </header>
