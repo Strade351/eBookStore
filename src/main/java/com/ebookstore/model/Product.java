@@ -1,8 +1,12 @@
 package com.ebookstore.model;
 
+import org.springframework.format.annotation.NumberFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Product {
@@ -11,13 +15,18 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int productId;
 
+    @NotEmpty (message = "The product name must not be null!")
     private String productName;
     private String productCategory;
     private String productAuthor;
     private String productDescription;
+
+    @Min(value = 0, message = "The product price must no be less than zero!")
     private int productPrice;
     private String productCondition;
     private String productStatus;
+
+    @Min(value = 0, message = "The product units must no be less than zero!")
     private int unitInStock;
     private String productLanguage;
 
